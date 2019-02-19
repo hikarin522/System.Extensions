@@ -10,22 +10,22 @@
   <Choose>
     <When Condition="$(TargetFramework.StartsWith('netstandard'))">
       <PropertyGroup>
-        <TargetName>netstandard</TargetName>
-        <TargetVersion>$(TargetFramework.TrimStart('netstandard'))</TargetVersion>
+        <_TargetFramework>netstandard</_TargetFramework>
+        <_TargetFrameworkVersion>$(TargetFramework.TrimStart('netstandard'))</_TargetFrameworkVersion>
       </PropertyGroup>
     </When>
 
     <When Condition="$(TargetFramework.StartsWith('netcoreapp'))">
       <PropertyGroup>
-        <TargetName>netcoreapp</TargetName>
-        <TargetVersion>$(TargetFramework.TrimStart('netcoreapp'))</TargetVersion>
+        <_TargetFramework>netcoreapp</_TargetFramework>
+        <_TargetFrameworkVersion>$(TargetFramework.TrimStart('netcoreapp'))</_TargetFrameworkVersion>
       </PropertyGroup>
     </When>
 
     <When Condition="$(TargetFramework.StartsWith('net'))">
       <PropertyGroup>
-        <TargetName>net</TargetName>
-        <TargetVersion>$(TargetFramework.TrimStart('net').Insert(1, '.'))</TargetVersion>
+        <_TargetFramework>net</_TargetFramework>
+        <_TargetFrameworkVersion>$(TargetFramework.TrimStart('net').Insert(1, '.'))</_TargetFrameworkVersion>
       </PropertyGroup>
     </When>
   </Choose>
@@ -35,23 +35,23 @@
   </ItemGroup>
 
   <Choose>
-    <When Condition="'$(TargetName)' == 'netstandard'">
+    <When Condition="'$(_TargetFramework)' == 'netstandard'">
       <ItemGroup>
-        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(TargetVersion) &lt; 2.0" />
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(_TargetFrameworkVersion) &lt; 2.0" />
         <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
-        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(TargetVersion) &gt;= 1.1" />
+        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(_TargetFrameworkVersion) &gt;= 1.1" />
       </ItemGroup>
     </When>
 
-    <When Condition="'$(TargetName)' == 'netcoreapp'">
+    <When Condition="'$(_TargetFramework)' == 'netcoreapp'">
       <ItemGroup>
-        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(TargetVersion) &lt; 2.1" />
+        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(_TargetFrameworkVersion) &lt; 2.1" />
       </ItemGroup>
     </When>
 
-    <When Condition="'$(TargetName)' == 'net'">
+    <When Condition="'$(_TargetFramework)' == 'net'">
       <ItemGroup>
-        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(TargetVersion) &lt; 4.7" />
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(_TargetFrameworkVersion) &lt; 4.7" />
         <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
         <PackageReference Include="System.Memory" Version="4.5.2" />
       </ItemGroup>
@@ -59,43 +59,43 @@
   </Choose>
 
   <Choose>
-    <When Condition="'$(TargetName)' == 'netstandard'">
+    <When Condition="'$(_TargetFramework)' == 'netstandard'">
       <PropertyGroup>
         <DefineConstants>NETSTANDARD;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.0">AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.1">AFTER_NETSTANDARD1_1;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.2">AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.3">AFTER_NETSTANDARD1_3;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.4">AFTER_NETSTANDARD1_4;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.5">AFTER_NETSTANDARD1_5;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.6">AFTER_NETSTANDARD1_6;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 2.0">AFTER_NETSTANDARD2_0;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.0">AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.1">AFTER_NETSTANDARD1_1;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.2">AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.3">AFTER_NETSTANDARD1_3;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.4">AFTER_NETSTANDARD1_4;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.5">AFTER_NETSTANDARD1_5;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.6">AFTER_NETSTANDARD1_6;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 2.0">AFTER_NETSTANDARD2_0;$(DefineConstants)</DefineConstants>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetName)' == 'netcoreapp'">
+    <When Condition="'$(_TargetFramework)' == 'netcoreapp'">
       <PropertyGroup>
         <DefineConstants>NETCOREAPP;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.0">AFTER_NETCOREAPP1_0;AFTER_NETSTANDARD1_6;AFTER_NETSTANDARD1_5;AFTER_NETSTANDARD1_4;AFTER_NETSTANDARD1_3;AFTER_NETSTANDARD1_2;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 1.1">AFTER_NETCOREAPP1_1;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 2.0">AFTER_NETCOREAPP2_0;AFTER_NETSTANDARD2_0;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 2.1">AFTER_NETCOREAPP2_1;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 2.2">AFTER_NETCOREAPP2_2;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.0">AFTER_NETCOREAPP1_0;AFTER_NETSTANDARD1_6;AFTER_NETSTANDARD1_5;AFTER_NETSTANDARD1_4;AFTER_NETSTANDARD1_3;AFTER_NETSTANDARD1_2;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 1.1">AFTER_NETCOREAPP1_1;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 2.0">AFTER_NETCOREAPP2_0;AFTER_NETSTANDARD2_0;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 2.1">AFTER_NETCOREAPP2_1;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 2.2">AFTER_NETCOREAPP2_2;$(DefineConstants)</DefineConstants>
       </PropertyGroup>
     </When>
 
-    <When Condition="'$(TargetName)' == 'net'">
+    <When Condition="'$(_TargetFramework)' == 'net'">
       <PropertyGroup>
         <DefineConstants>NET;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.5">AFTER_NET45;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.51">AFTER_NET451;AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.52">AFTER_NET452;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.6">AFTER_NET46;AFTER_NETSTANDARD1_3;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.61">AFTER_NET461;AFTER_NETSTANDARD2_0;AFTER_NETSTANDARD1_6;AFTER_NETSTANDARD1_5;AFTER_NETSTANDARD1_4;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.62">AFTER_NET462;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.7">AFTER_NET47;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.71">AFTER_NET471;$(DefineConstants)</DefineConstants>
-        <DefineConstants Condition="$(TargetVersion) &gt;= 4.72">AFTER_NET472;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.5">AFTER_NET45;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.51">AFTER_NET451;AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.52">AFTER_NET452;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.6">AFTER_NET46;AFTER_NETSTANDARD1_3;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.61">AFTER_NET461;AFTER_NETSTANDARD2_0;AFTER_NETSTANDARD1_6;AFTER_NETSTANDARD1_5;AFTER_NETSTANDARD1_4;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.62">AFTER_NET462;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.7">AFTER_NET47;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.71">AFTER_NET471;$(DefineConstants)</DefineConstants>
+        <DefineConstants Condition="$(_TargetFrameworkVersion) &gt;= 4.72">AFTER_NET472;$(DefineConstants)</DefineConstants>
       </PropertyGroup>
     </When>
   </Choose>
