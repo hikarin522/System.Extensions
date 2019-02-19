@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
 
 namespace System.Linq
 {
@@ -9,6 +10,10 @@ namespace System.Linq
             => new ReadOnlyCollection<T>(source);
 
         public static ReadOnlyCollection<T> ToReadOnlyCollection<T>(this IEnumerable<T> source)
+#if AFTER_NETSTANDARD2_0 || AFTER_NET45
+            => new ReadOnlyCollectionBuilder<T>(source).ToReadOnlyCollection();
+#else
             => source.ToList().ToReadOnlyCollection();
+#endif
     }
 }
