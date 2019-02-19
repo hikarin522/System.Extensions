@@ -7,16 +7,61 @@
     <DefineDebug Condition="'$(Configuration)' == 'Debug'">true</DefineDebug>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Interactive" Version="3.2.0" />
-    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
-  </ItemGroup>
-
   <Choose>
     <When Condition="$(TargetFramework.StartsWith('netstandard'))">
       <PropertyGroup>
-        <DefineConstants>NETSTANDARD;$(DefineConstants)</DefineConstants>
+        <TargetName>netstandard</TargetName>
         <TargetVersion>$(TargetFramework.TrimStart('netstandard'))</TargetVersion>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="$(TargetFramework.StartsWith('netcoreapp'))">
+      <PropertyGroup>
+        <TargetName>netcoreapp</TargetName>
+        <TargetVersion>$(TargetFramework.TrimStart('netcoreapp'))</TargetVersion>
+      </PropertyGroup>
+    </When>
+
+    <When Condition="$(TargetFramework.StartsWith('net'))">
+      <PropertyGroup>
+        <TargetName>net</TargetName>
+        <TargetVersion>$(TargetFramework.TrimStart('net').Insert(1, '.'))</TargetVersion>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup>
+    <PackageReference Include="System.Interactive" Version="3.2.0" />
+  </ItemGroup>
+
+  <Choose>
+    <When Condition="'$(TargetName)' == 'netstandard'">
+      <ItemGroup>
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(TargetVersion) &lt; 2.0" />
+        <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(TargetVersion) &gt;= 1.1" />
+      </ItemGroup>
+    </When>
+
+    <When Condition="'$(TargetName)' == 'netcoreapp'">
+      <ItemGroup>
+        <PackageReference Include="System.Memory" Version="4.5.2" Condition="$(TargetVersion) &lt; 2.1" />
+      </ItemGroup>
+    </When>
+
+    <When Condition="'$(TargetName)' == 'net'">
+      <ItemGroup>
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" Condition="$(TargetVersion) &lt; 4.7" />
+        <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+        <PackageReference Include="System.Memory" Version="4.5.2" />
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <Choose>
+    <When Condition="'$(TargetName)' == 'netstandard'">
+      <PropertyGroup>
+        <DefineConstants>NETSTANDARD;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 1.0">AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 1.1">AFTER_NETSTANDARD1_1;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 1.2">AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
@@ -28,10 +73,9 @@
       </PropertyGroup>
     </When>
 
-    <When Condition="$(TargetFramework.StartsWith('netcoreapp'))">
+    <When Condition="'$(TargetName)' == 'netcoreapp'">
       <PropertyGroup>
         <DefineConstants>NETCOREAPP;$(DefineConstants)</DefineConstants>
-        <TargetVersion>$(TargetFramework.TrimStart('netcoreapp'))</TargetVersion>
         <DefineConstants Condition="$(TargetVersion) &gt;= 1.0">AFTER_NETCOREAPP1_0;AFTER_NETSTANDARD1_6;AFTER_NETSTANDARD1_5;AFTER_NETSTANDARD1_4;AFTER_NETSTANDARD1_3;AFTER_NETSTANDARD1_2;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 1.1">AFTER_NETCOREAPP1_1;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 2.0">AFTER_NETCOREAPP2_0;AFTER_NETSTANDARD2_0;$(DefineConstants)</DefineConstants>
@@ -40,10 +84,9 @@
       </PropertyGroup>
     </When>
 
-    <When Condition="$(TargetFramework.StartsWith('net'))">
+    <When Condition="'$(TargetName)' == 'net'">
       <PropertyGroup>
         <DefineConstants>NET;$(DefineConstants)</DefineConstants>
-        <TargetVersion>$(TargetFramework.TrimStart('net').Insert(1, '.'))</TargetVersion>
         <DefineConstants Condition="$(TargetVersion) &gt;= 4.5">AFTER_NET45;AFTER_NETSTANDARD1_1;AFTER_NETSTANDARD1_0;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 4.51">AFTER_NET451;AFTER_NETSTANDARD1_2;$(DefineConstants)</DefineConstants>
         <DefineConstants Condition="$(TargetVersion) &gt;= 4.52">AFTER_NET452;$(DefineConstants)</DefineConstants>
