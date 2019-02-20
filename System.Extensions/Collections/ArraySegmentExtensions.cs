@@ -27,8 +27,12 @@ namespace System.Linq
     public static class ArraySegmentExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ArraySegment<T> ToArraySegment<T>(this T[] array)
+        public static ArraySegment<T> AsArraySegment<T>(this T[] array)
+#if AFTER_NETCOREAPP2_0
+            => array;
+#else
             => ArraySegment.Create(array);
+#endif
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ArraySegment<T> ToArraySegment<T>(this T[] array, int offset, int count)

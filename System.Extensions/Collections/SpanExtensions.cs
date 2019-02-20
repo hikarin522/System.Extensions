@@ -1,3 +1,4 @@
+#if AFTER_NETSTANDARD1_1
 using System.Runtime.CompilerServices;
 
 namespace System
@@ -23,11 +24,16 @@ namespace System.Linq
     public static class SpanExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Span<T> ToSpan<T>(this T[] array)
-            => Span.Create(array);
+        public static Span<T> AsSpan<T>(this T[] array)
+            => array;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Span<T> AsSpan<T>(this ArraySegment<T> segment)
+            => segment;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Span<T> ToSpan<T>(this T[] array, int start, int length)
             => Span.Create(array, start, length);
     }
 }
+#endif
