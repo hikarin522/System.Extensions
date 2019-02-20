@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 
-namespace System.Linq
+namespace System
 {
     public static class BitVector32Extensions
     {
