@@ -7,7 +7,7 @@ namespace System.Linq
     public static class ReadOnlyCollectionExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ReadOnlyCollection<T> ToReadOnlyCollection<T>(this IList<T> source)
+        public static ReadOnlyCollection<T> AsReadOnlyCollection<T>(this IList<T> source)
             => new ReadOnlyCollection<T>(source);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -15,7 +15,7 @@ namespace System.Linq
 #if AFTER_NETSTANDARD2_0 || AFTER_NET45
             => new ReadOnlyCollectionBuilder<T>(source).ToReadOnlyCollection();
 #else
-            => source.ToList().ToReadOnlyCollection();
+            => source.ToArray().AsReadOnlyCollection();
 #endif
     }
 }
