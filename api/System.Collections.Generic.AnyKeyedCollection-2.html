@@ -1,0 +1,617 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AnyKeyedCollection&lt;TKey, TItem&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AnyKeyedCollection&lt;TKey, TItem&gt;
+   ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="System.Collections.Generic.AnyKeyedCollection`2">
+  
+  
+  <h1 id="System_Collections_Generic_AnyKeyedCollection_2" data-uid="System.Collections.Generic.AnyKeyedCollection`2" class="text-break">Class AnyKeyedCollection&lt;TKey, TItem&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;TItem&gt;</div>
+    <div class="level2"><span class="xref">System.Collections.ObjectModel.KeyedCollection</span>&lt;TKey, TItem&gt;</div>
+    <div class="level3"><span class="xref">AnyKeyedCollection&lt;TKey, TItem&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IList</span>&lt;TItem&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;TItem&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;TItem&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;TItem&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TItem&gt;</div>
+    <div><span class="xref">System.Collections.IList</span></div>
+    <div><span class="xref">System.Collections.ICollection</span></div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.ChangeItemKey(TItem, TKey)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.ClearItems()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.Contains(TKey)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.TryGetValue(TKey, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.GetKeyForItem(TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.InsertItem(System.Int32, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.Remove(TKey)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.RemoveItem(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.SetItem(System.Int32, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.Comparer</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.Dictionary</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.Item[TKey]</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.get_Item(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.set_Item(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Add(TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Clear()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.ClearItems()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Contains(TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.CopyTo(TItem[], System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.IndexOf(TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Insert(System.Int32, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.InsertItem(System.Int32, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Remove(TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.RemoveAt(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.RemoveItem(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.SetItem(System.Int32, TItem)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.ICollection.CopyTo(System.Array, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IEnumerable.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.Add(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.Contains(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.IndexOf(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.Insert(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.Remove(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Count</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.Items</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.Generic.ICollection&lt;TItem&gt;.IsReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.ICollection.IsSynchronized</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.ICollection.SyncRoot</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.IsFixedSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.IsReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">System.Collections.ObjectModel.Collection&lt;TItem&gt;.System.Collections.IList.Item[System.Int32]</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="System.Collections.Generic.html">System.Collections.Generic</a></h6>
+  <h6><strong>Assembly</strong>: System.Extensions.dll</h6>
+  <h5 id="System_Collections_Generic_AnyKeyedCollection_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AnyKeyedCollection&lt;TKey, TItem&gt; : KeyedCollection&lt;TKey, TItem&gt;, IList&lt;TItem&gt;, ICollection&lt;TItem&gt;, IReadOnlyList&lt;TItem&gt;, IReadOnlyCollection&lt;TItem&gt;, IEnumerable&lt;TItem&gt;, IList, ICollection, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="System_Collections_Generic_AnyKeyedCollection_2__ctor_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor*"></a>
+  <h4 id="System_Collections_Generic_AnyKeyedCollection_2__ctor_System_Func__1__0__" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor(System.Func{`1,`0})">AnyKeyedCollection(Func&lt;TItem, TKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnyKeyedCollection(Func&lt;TItem, TKey&gt; keySelector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TItem, TKey&gt;</td>
+        <td><span class="parametername">keySelector</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="System_Collections_Generic_AnyKeyedCollection_2__ctor_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor*"></a>
+  <h4 id="System_Collections_Generic_AnyKeyedCollection_2__ctor_System_Func__1__0__System_Collections_Generic_IEqualityComparer__0__" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor(System.Func{`1,`0},System.Collections.Generic.IEqualityComparer{`0})">AnyKeyedCollection(Func&lt;TItem, TKey&gt;, IEqualityComparer&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnyKeyedCollection(Func&lt;TItem, TKey&gt; keySelector, IEqualityComparer&lt;TKey&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TItem, TKey&gt;</td>
+        <td><span class="parametername">keySelector</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEqualityComparer</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="System_Collections_Generic_AnyKeyedCollection_2__ctor_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor*"></a>
+  <h4 id="System_Collections_Generic_AnyKeyedCollection_2__ctor_System_Func__1__0__System_Collections_Generic_IEqualityComparer__0__System_Int32_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.#ctor(System.Func{`1,`0},System.Collections.Generic.IEqualityComparer{`0},System.Int32)">AnyKeyedCollection(Func&lt;TItem, TKey&gt;, IEqualityComparer&lt;TKey&gt;, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnyKeyedCollection(Func&lt;TItem, TKey&gt; keySelector, IEqualityComparer&lt;TKey&gt; comparer, int dictionaryCreationThreshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TItem, TKey&gt;</td>
+        <td><span class="parametername">keySelector</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEqualityComparer</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">dictionaryCreationThreshold</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="System_Collections_Generic_AnyKeyedCollection_2_GetKeyForItem_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.GetKeyForItem*"></a>
+  <h4 id="System_Collections_Generic_AnyKeyedCollection_2_GetKeyForItem__1_" data-uid="System.Collections.Generic.AnyKeyedCollection`2.GetKeyForItem(`1)">GetKeyForItem(TItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed TKey GetKeyForItem(TItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TItem</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;.GetKeyForItem(TItem)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IList</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.ICollection</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="System.NullableExtensions.html#System_NullableExtensions_Map__2___0_System_Func___0___1__">NullableExtensions.Map&lt;TValue, TResult&gt;(TValue, Func&lt;TValue, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.StrongBoxExtensions.html#System_StrongBoxExtensions_ToStrongBox__1___0_">StrongBoxExtensions.ToStrongBox&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.WeakReferenceExtensions.html#System_WeakReferenceExtensions_GetWeakReference__1___0_">WeakReferenceExtensions.GetWeakReference&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.WeakReferenceExtensions.html#System_WeakReferenceExtensions_GetWeakReference__1___0_System_Boolean_">WeakReferenceExtensions.GetWeakReference&lt;T&gt;(T, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.KeyedCollectionExtensions.html#System_Linq_KeyedCollectionExtensions_ToKeyedCollection__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__">KeyedCollectionExtensions.ToKeyedCollection&lt;TKey, TItem&gt;(IEnumerable&lt;TItem&gt;, Func&lt;TItem, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.KeyedCollectionExtensions.html#System_Linq_KeyedCollectionExtensions_ToKeyedCollection__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__System_Collections_Generic_IEqualityComparer___0__">KeyedCollectionExtensions.ToKeyedCollection&lt;TKey, TItem&gt;(IEnumerable&lt;TItem&gt;, Func&lt;TItem, TKey&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.KeyedCollectionExtensions.html#System_Linq_KeyedCollectionExtensions_ToKeyedCollection__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__System_Collections_Generic_IEqualityComparer___0__System_Int32_">KeyedCollectionExtensions.ToKeyedCollection&lt;TKey, TItem&gt;(IEnumerable&lt;TItem&gt;, Func&lt;TItem, TKey&gt;, IEqualityComparer&lt;TKey&gt;, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ConcurrentDictionaryExtensions.html#System_Linq_ConcurrentDictionaryExtensions_ToConcurrentDictionary__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">ConcurrentDictionaryExtensions.ToConcurrentDictionary&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ConcurrentDictionaryExtensions.html#System_Linq_ConcurrentDictionaryExtensions_ToConcurrentDictionary__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__">ConcurrentDictionaryExtensions.ToConcurrentDictionary&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ConcurrentDictionaryExtensions.html#System_Linq_ConcurrentDictionaryExtensions_ToConcurrentDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">ConcurrentDictionaryExtensions.ToConcurrentDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ConcurrentDictionaryExtensions.html#System_Linq_ConcurrentDictionaryExtensions_ToConcurrentDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Collections_Generic_IEqualityComparer___1__">ConcurrentDictionaryExtensions.ToConcurrentDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ConditionalWeakTableExtensions.html#System_Linq_ConditionalWeakTableExtensions_ToConditionalWeakTable__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">ConditionalWeakTableExtensions.ToConditionalWeakTable&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.KeyValuePairExtensions.html#System_Linq_KeyValuePairExtensions_SelectKeyValuePair__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__">KeyValuePairExtensions.SelectKeyValuePair&lt;TKey, TValue&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.KeyValuePairExtensions.html#System_Linq_KeyValuePairExtensions_SelectKeyValuePair__3_System_Collections_Generic_IEnumerable___2__System_Func___2___0__System_Func___2___1__">KeyValuePairExtensions.SelectKeyValuePair&lt;TKey, TValue, TSource&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.LinkedListExtensions.html#System_Linq_LinkedListExtensions_ToLinkedList__1_System_Collections_Generic_IEnumerable___0__">LinkedListExtensions.ToLinkedList&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.QueueExtensions.html#System_Linq_QueueExtensions_ToQueue__1_System_Collections_Generic_IEnumerable___0__">QueueExtensions.ToQueue&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyCollectionExtensions.html#System_Linq_ReadOnlyCollectionExtensions_AsReadOnly__1_System_Collections_Generic_IList___0__">ReadOnlyCollectionExtensions.AsReadOnly&lt;T&gt;(IList&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyCollectionExtensions.html#System_Linq_ReadOnlyCollectionExtensions_ToReadOnly__1_System_Collections_Generic_IEnumerable___0__">ReadOnlyCollectionExtensions.ToReadOnly&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyDictionaryExtensions.html#System_Linq_ReadOnlyDictionaryExtensions_ToReadOnlyDictionary__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__">ReadOnlyDictionaryExtensions.ToReadOnlyDictionary&lt;TKey, TValue&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyDictionaryExtensions.html#System_Linq_ReadOnlyDictionaryExtensions_ToReadOnlyDictionary__2_System_Collections_Generic_IEnumerable___1__System_Func___1___0__System_Collections_Generic_IEqualityComparer___0__">ReadOnlyDictionaryExtensions.ToReadOnlyDictionary&lt;TKey, TValue&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyDictionaryExtensions.html#System_Linq_ReadOnlyDictionaryExtensions_ToReadOnlyDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">ReadOnlyDictionaryExtensions.ToReadOnlyDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.ReadOnlyDictionaryExtensions.html#System_Linq_ReadOnlyDictionaryExtensions_ToReadOnlyDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Collections_Generic_IEqualityComparer___1__">ReadOnlyDictionaryExtensions.ToReadOnlyDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">SortedDictionaryExtensions.ToSortedDictionary&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">SortedDictionaryExtensions.ToSortedDictionary&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Comparison___1__">SortedDictionaryExtensions.ToSortedDictionary&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, Comparison&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">SortedDictionaryExtensions.ToSortedDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Collections_Generic_IComparer___1__">SortedDictionaryExtensions.ToSortedDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedDictionaryExtensions.html#System_Linq_SortedDictionaryExtensions_ToSortedDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Comparison___1__">SortedDictionaryExtensions.ToSortedDictionary&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, Comparison&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">SortedListExtensions.ToSortedList&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IComparer___1__">SortedListExtensions.ToSortedList&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Comparison___1__">SortedListExtensions.ToSortedList&lt;TValue, TKey&gt;(IEnumerable&lt;TValue&gt;, Func&lt;TValue, TKey&gt;, Comparison&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">SortedListExtensions.ToSortedList&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Collections_Generic_IComparer___1__">SortedListExtensions.ToSortedList&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, IComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedListExtensions.html#System_Linq_SortedListExtensions_ToSortedList__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Comparison___1__">SortedListExtensions.ToSortedList&lt;TSource, TKey, TValue&gt;(IEnumerable&lt;TSource&gt;, Func&lt;TSource, TKey&gt;, Func&lt;TSource, TValue&gt;, Comparison&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedSetExtensions.html#System_Linq_SortedSetExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__">SortedSetExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedSetExtensions.html#System_Linq_SortedSetExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__">SortedSetExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.SortedSetExtensions.html#System_Linq_SortedSetExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Comparison___0__">SortedSetExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, Comparison&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.StackExtensions.html#System_Linq_StackExtensions_ToStack__1_System_Collections_Generic_IEnumerable___0__">StackExtensions.ToStack&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__2_System_Collections_Generic_IEnumerable___0____1_System_Action___1___0__">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Action&lt;TAccumulate, TItem&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__3_System_Collections_Generic_IEnumerable___0____1_System_Action___1___0__System_Func___1___2__">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate, TResult&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Action&lt;TAccumulate, TItem&gt;, Func&lt;TAccumulate, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Func___0___0___">EnumerableExtensions.Aggregate&lt;TItem&gt;(IEnumerable&lt;TItem&gt;, Func&lt;TItem, Func&lt;TItem, TItem&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__2_System_Collections_Generic_IEnumerable___0____1_System_Func___1_System_Func___0___1___">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Func&lt;TAccumulate, Func&lt;TItem, TAccumulate&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__2_System_Collections_Generic_IEnumerable___0____1_System_Func___1_System_Action___0___">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Func&lt;TAccumulate, Action&lt;TItem&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__3_System_Collections_Generic_IEnumerable___0____1_System_Func___1_System_Func___0___1___System_Func___1___2__">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate, TResult&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Func&lt;TAccumulate, Func&lt;TItem, TAccumulate&gt;&gt;, Func&lt;TAccumulate, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Linq.EnumerableExtensions.html#System_Linq_EnumerableExtensions_Aggregate__3_System_Collections_Generic_IEnumerable___0____1_System_Func___1_System_Action___0___System_Func___1___2__">EnumerableExtensions.Aggregate&lt;TItem, TAccumulate, TResult&gt;(IEnumerable&lt;TItem&gt;, TAccumulate, Func&lt;TAccumulate, Action&lt;TItem&gt;&gt;, Func&lt;TAccumulate, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="System.Collections.Generic.CollectionExtensions.html#System_Collections_Generic_CollectionExtensions_Add__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__">CollectionExtensions.Add&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
