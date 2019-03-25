@@ -6,6 +6,64 @@ namespace System.Linq.Expressions
 {
     public static class ExpressionExtensions
     {
+        #region Call
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, Expression arg0)
+            => Expression.Call(method, arg0);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, Expression arg0, Expression arg1)
+            => Expression.Call(method, arg0, arg1);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, Expression arg0, Expression arg1, Expression arg2)
+            => Expression.Call(method, arg0, arg1, arg2);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3)
+            => Expression.Call(method, arg0, arg1, arg2, arg3);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4)
+            => Expression.Call(method, arg0, arg1, arg2, arg3, arg4);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, params Expression[] arguments)
+            => Expression.Call(method, arguments);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this MethodInfo method, IEnumerable<Expression> arguments)
+            => Expression.Call(method, arguments);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method)
+            => Expression.Call(instance, method);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method, Expression arg0)
+            => Expression.Call(instance, method, arg0);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method, Expression arg0, Expression arg1)
+            => Expression.Call(instance, method, arg0, arg1);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2)
+            => Expression.Call(instance, method, arg0, arg1, arg2);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method, params Expression[] arguments)
+            => Expression.Call(instance, method, arguments);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, MethodInfo method, IEnumerable<Expression> arguments)
+            => Expression.Call(instance, method, arguments);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MethodCallExpression Call(this Expression instance, string methodName, Type[] typeArguments, params Expression[] arguments)
+            => Expression.Call(instance, methodName, typeArguments, arguments);
+        #endregion
+
         #region Convert & ConvertChecked
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static UnaryExpression Convert(this Expression expression, Type type)
