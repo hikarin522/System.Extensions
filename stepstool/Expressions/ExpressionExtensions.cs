@@ -40,6 +40,20 @@ namespace System.Linq.Expressions
             => Expression.ConvertChecked(expression, typeof(T), method);
         #endregion
 
+        #region Field
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MemberExpression Field(this Expression expression, FieldInfo field)
+            => Expression.Field(expression, field);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MemberExpression Field(this Expression expression, string fieldName)
+            => Expression.Field(expression, fieldName);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static MemberExpression Field<T>(this Expression expression, string fieldName)
+            => Expression.Field(expression, typeof(T), fieldName);
+        #endregion
+
         #region Lambda
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LambdaExpression Lambda(this Expression body, params ParameterExpression[] parameters)
