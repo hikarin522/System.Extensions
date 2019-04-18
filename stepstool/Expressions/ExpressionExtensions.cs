@@ -112,6 +112,16 @@ namespace System.Linq.Expressions
             => Expression.Field(expression, typeof(T), fieldName);
         #endregion
 
+        #region Invoke
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static InvocationExpression Invoke(this Expression expression, params Expression[] arguments)
+            => Expression.Invoke(expression, arguments);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static InvocationExpression Invoke(this Expression expression, IEnumerable<Expression> arguments)
+            => Expression.Invoke(expression, arguments);
+        #endregion
+
         #region Lambda
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LambdaExpression Lambda(this Expression body, params ParameterExpression[] parameters)
